@@ -13,12 +13,27 @@
 }
 
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
 
 main {
