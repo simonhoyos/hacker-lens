@@ -1,0 +1,30 @@
+.bar {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--white);
+
+  padding: 1rem 0.75rem;
+
+  border-bottom: 1px solid var(--neutral-200)
+}
+
+@media (widht >= 768px) {
+  .bar {
+    padding: 2rem 1rem;
+  }
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}

@@ -1,10 +1,10 @@
 #root {
   --white: #ffffff;
   --neutral-950: #0a0a0a;
-  --neutral-900: #171717;
+  --primary: #171717;
   --neutral-700: #404040;
   --neutral-600: #525252;
-  --neutral-400: #a3a3a3;
+  --text-mute: #a3a3a3;
   --neutral-200: #e5e5e5;
   --neutral-50: #fafafa;
   --orange-600: #ea580c;
@@ -38,11 +38,6 @@ body {
 
 main {
   display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 hr {
