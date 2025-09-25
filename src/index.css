@@ -1,11 +1,15 @@
 #root {
   --white: #ffffff;
-  --neutral-950: #0a0a0a;
+
   --primary: #171717;
-  --neutral-700: #404040;
-  --neutral-600: #525252;
+  --secondary: #525252;
+
+  --border-primary: #e5e5e5;
+
   --text-mute: #a3a3a3;
-  --neutral-200: #e5e5e5;
+
+  --neutral-950: #0a0a0a;
+  --neutral-700: #404040;
   --neutral-50: #fafafa;
   --orange-600: #ea580c;
   --orange-500: #F97316;

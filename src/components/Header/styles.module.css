@@ -9,7 +9,7 @@
 
   padding: 1rem 0.75rem;
 
-  border-bottom: 1px solid var(--neutral-200)
+  border-bottom: 1px solid var(--border-primary)
 }
 
 @media (widht >= 768px) {
