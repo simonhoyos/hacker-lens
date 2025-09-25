@@ -1,6 +1,6 @@
 import classes from './styles.module.css';
 
-export function TopBar() {
+export function Header() {
   return (
     <header className={classes.bar}>
       <a

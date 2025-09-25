@@ -1,10 +1,9 @@
-import './App.css';
-import { TopBar } from './components/TopBar/index.tsx';
+import { Header } from './components/Header/index.tsx';
 
 function App() {
   return (
     <>
-      <TopBar />
+      <Header />
     </>
   );
 }
