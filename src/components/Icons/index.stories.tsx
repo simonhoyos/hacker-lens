@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { LogoIcon, MenuIcon } from './index.tsx';
+import {
+  BriefcaseIcon,
+  EyeIcon,
+  HomeIcon,
+  LogoIcon,
+  MenuIcon,
+  SpeakIcon,
+} from './index.tsx';
 
 const meta: Meta = {
   title: 'Icons',
@@ -18,4 +25,20 @@ export const Logo: Story = {
 
 export const Menu: Story = {
   render: () => <MenuIcon />,
+};
+
+export const Speak: Story = {
+  render: () => <SpeakIcon />,
+};
+
+export const Briefcase: Story = {
+  render: () => <BriefcaseIcon />,
+};
+
+export const Eye: Story = {
+  render: () => <EyeIcon />,
+};
+
+export const Home: Story = {
+  render: () => <HomeIcon />,
 };
