@@ -105,3 +105,20 @@ export function HomeIcon() {
     </svg>
   );
 }
+
+export function CloseIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.00049 8.0184L12.4378 4.58105L13.4199 5.56314L9.98257 9.00049L13.4199 12.4378L12.4378 13.4199L9.00049 9.98257L5.56314 13.4199L4.58105 12.4378L8.0184 9.00049L4.58105 5.56314L5.56314 4.58105L9.00049 8.0184Z"
+        fill="#525252"
+      />
+    </svg>
+  );
+}

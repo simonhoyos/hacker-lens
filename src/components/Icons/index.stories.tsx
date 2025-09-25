@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   BriefcaseIcon,
+  CloseIcon,
   EyeIcon,
   HomeIcon,
   LogoIcon,
@@ -41,4 +42,8 @@ export const Eye: Story = {
 
 export const Home: Story = {
   render: () => <HomeIcon />,
+};
+
+export const Close: Story = {
+  render: () => <CloseIcon />,
 };
