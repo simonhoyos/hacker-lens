@@ -28,10 +28,11 @@ export function Navigation(props: {
   onCloseClick: MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <button
-      className={cn(classes.overlay, props.open && classes['overlay--open'])}
-      onClick={props.onCloseClick}
-    >
+    <>
+      <button
+        className={cn(classes.overlay, props.open && classes['overlay--open'])}
+        onClick={props.onCloseClick}
+      ></button>
       <nav
         className={cn(
           classes.navigation,
@@ -66,6 +67,6 @@ export function Navigation(props: {
           ))}
         </div>
       </nav>
-    </button>
+    </>
   );
 }
