@@ -24,7 +24,7 @@ export type ActiveLink = (typeof NAVIGATION_LINK_LIST)[number]['id'];
 
 export function Navigation(props: {
   open: boolean;
-  active: ActiveLink;
+  activeTab: ActiveLink;
   onCloseClick: MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
@@ -53,7 +53,7 @@ export function Navigation(props: {
             href={link.href}
             className={cn(
               classes.navigation_link,
-              props.active === link.id && classes['navigation_link--active'],
+              props.activeTab === link.id && classes['navigation_link--active'],
             )}
           >
             <link.Icon /> {link.label}

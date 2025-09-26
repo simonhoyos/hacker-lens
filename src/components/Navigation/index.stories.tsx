@@ -9,7 +9,7 @@ const meta = {
   component: Navigation,
   argTypes: {
     open: { control: 'boolean' },
-    active: {
+    activeTab: {
       control: { type: 'select' },
       options: NAVIGATION_LINK_LIST.map((link) => link.id),
     },
@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     open: true,
-    active: 'new',
+    activeTab: 'new',
     onCloseClick: fn(),
   },
   render: (props: {
@@ -44,7 +44,7 @@ export const Default: Story = {
     >
       <Navigation
         open={props.open}
-        active={props.active}
+        activeTab={props.active}
         onCloseClick={props.onCloseClick}
       />
     </div>
