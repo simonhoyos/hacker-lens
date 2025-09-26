@@ -36,6 +36,8 @@
 @media (width >= 992px) {
   .navigation {
     display: flex;
+
+    position: relative;
   }
 }
 

@@ -31,7 +31,7 @@ export const Default: Story = {
   },
   render: (props: {
     open: boolean;
-    active: ActiveLink;
+    activeTab: ActiveLink;
     onCloseClick: MouseEventHandler<HTMLButtonElement>;
   }) => (
     <div
@@ -44,7 +44,7 @@ export const Default: Story = {
     >
       <Navigation
         open={props.open}
-        activeTab={props.active}
+        activeTab={props.activeTab}
         onCloseClick={props.onCloseClick}
       />
     </div>
