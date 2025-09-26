@@ -12,6 +12,11 @@
   border-bottom: 1px solid var(--border-primary)
 }
 
+.logo  {
+  display: inline-flex;
+}
+
+
 @media (width >= 768px) {
   .bar {
     padding: 2rem 1rem;
@@ -25,8 +30,14 @@
 }
 
 .menu {
-  background-color: transparent;
+  padding: 0;
   border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
   cursor: pointer;
 }
 

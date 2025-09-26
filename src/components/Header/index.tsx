@@ -11,6 +11,7 @@ export function Header(props: {
       <a
         href="/"
         aria-label="Go to homepage"
+        className={classes.logo}
       >
         <LogoIcon aria-hidden="true" />
       </a>
