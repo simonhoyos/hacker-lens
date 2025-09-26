@@ -28,38 +28,44 @@ export function Navigation(props: {
   onCloseClick: MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <nav
-      className={cn(
-        classes.navigation,
-        props.open && classes['navigation--open'],
-      )}
+    <button
+      className={cn(classes.overlay, props.open && classes['overlay--open'])}
+      onClick={props.onCloseClick}
     >
-      <div className={classes.navigation_header}>
-        <LogoIcon />
-        <button
-          type="button"
-          aria-label="Close navigation menu"
-          className={classes.navigation_close}
-          onClick={props.onCloseClick}
-        >
-          <CloseIcon />
-        </button>
-      </div>
-
-      <div className={classes.navigation_link_list}>
-        {NAVIGATION_LINK_LIST.map((link) => (
-          <a
-            key={link.id}
-            href={link.href}
-            className={cn(
-              classes.navigation_link,
-              props.activeTab === link.id && classes['navigation_link--active'],
-            )}
+      <nav
+        className={cn(
+          classes.navigation,
+          props.open && classes['navigation--open'],
+        )}
+      >
+        <div className={classes.navigation_header}>
+          <LogoIcon />
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            className={classes.navigation_close}
+            onClick={props.onCloseClick}
           >
-            <link.Icon /> {link.label}
-          </a>
-        ))}
-      </div>
-    </nav>
+            <CloseIcon />
+          </button>
+        </div>
+
+        <div className={classes.navigation_link_list}>
+          {NAVIGATION_LINK_LIST.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              className={cn(
+                classes.navigation_link,
+                props.activeTab === link.id &&
+                  classes['navigation_link--active'],
+              )}
+            >
+              <link.Icon /> {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </button>
   );
 }

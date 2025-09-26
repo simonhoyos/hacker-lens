@@ -1,3 +1,12 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .navigation {
   width: 240px;
   padding: 24px 16px;
@@ -12,10 +21,16 @@
 
   background-color: var(--white);
   border-right: 1px solid var(--border-primary);
+
+  z-index: 10;
 }
 
 .navigation--open {
   display: flex;
+}
+
+.overlay--open {
+  display: block;
 }
 
 @media (width >= 992px) {
