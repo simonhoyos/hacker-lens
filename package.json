@@ -14,8 +14,10 @@
   "dependencies": {
     "@tanstack/react-query": "^5.90.2",
     "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
