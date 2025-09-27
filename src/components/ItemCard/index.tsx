@@ -22,24 +22,33 @@ export function ItemCard(props: { item: z.infer<typeof ItemSchema> }) {
       <section className={classes.content}>
         <section className={classes.header}>
           <h1 className="text-sm font-medium">{props.item.title}</h1>
-          <p className="text-xs font-normal">({props.item.url})</p>
+
+          {props.item.url != null && (
+            <p className="text-xs font-normal">({props.item.url})</p>
+          )}
         </section>
 
         <footer className={cn('text-xs font-normal', classes.footer)}>
-          <div className={classes.stat}>
-            <ArrowUpDoubleIcon />
-            <p>{props.item.score ?? 0}</p>
-          </div>
-          <div className={classes.stat}>
-            <PenIcon />
-            <p>
-              by <span className={classes.author}>{props.item.by}</span>
-            </p>
-          </div>
-          <div className={classes.stat}>
-            <ClockIcon />
-            <p>{formatDistanceToNow(new Date(props.item.time * 1000))} ago</p>
-          </div>
+          {props.item.score != null && (
+            <div className={classes.stat}>
+              <ArrowUpDoubleIcon />
+              <p>{props.item.score ?? 0}</p>
+            </div>
+          )}
+          {props.item.by != null && (
+            <div className={classes.stat}>
+              <PenIcon />
+              <p>
+                by <span className={classes.author}>{props.item.by}</span>
+              </p>
+            </div>
+          )}
+          {props.item.time != null && (
+            <div className={classes.stat}>
+              <ClockIcon />
+              <p>{formatDistanceToNow(new Date(props.item.time * 1000))} ago</p>
+            </div>
+          )}
           <div className={classes.stat}>
             <ChatBubbleIcon />
             <p>
