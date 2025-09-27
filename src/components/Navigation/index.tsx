@@ -57,6 +57,7 @@ export function Navigation(props: {
               key={link.id}
               href={link.href}
               className={cn(
+                'text-sm font-medium',
                 classes.navigation_link,
                 props.activeTab === link.id &&
                   classes['navigation_link--active'],
