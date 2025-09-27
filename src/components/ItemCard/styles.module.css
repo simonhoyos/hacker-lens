@@ -5,10 +5,22 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+
 }
 
-.incon {
-  min-width: 1.5rem;
+.card:hover {
+  background-color: var(--orange-50);
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-flex;
+
+  padding: 0.625rem;
+
+  background-color: var(--neutral-50);
+
+  border-radius: 100%;
 }
 
 .content {
