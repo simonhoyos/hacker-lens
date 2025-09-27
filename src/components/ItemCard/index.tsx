@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { formatDistanceToNow } from 'date-fns';
 import type z from 'zod';
 
 import type { ItemSchema } from '../../lib/constants';
@@ -37,7 +38,7 @@ export function ItemCard(props: { item: z.infer<typeof ItemSchema> }) {
           </div>
           <div className={classes.stat}>
             <ClockIcon />
-            <p>{props.item.time} ago</p>
+            <p>{formatDistanceToNow(new Date(props.item.time * 1000))} ago</p>
           </div>
           <div className={classes.stat}>
             <ChatBubbleIcon />
