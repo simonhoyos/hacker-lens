@@ -1,12 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
+  ArrowUpDoubleIcon,
+  ArticleIcon,
+  BarChartIcon,
   BriefcaseIcon,
+  ChatBubbleIcon,
+  ClockIcon,
   CloseIcon,
   EyeIcon,
   HomeIcon,
   LogoIcon,
   MenuIcon,
+  PenIcon,
   SpeakIcon,
 } from './index.tsx';
 
@@ -47,3 +53,28 @@ export const Home: Story = {
 export const Close: Story = {
   render: () => <CloseIcon />,
 };
+
+export const ArrowUpDouble: Story = {
+  render: () => <ArrowUpDoubleIcon />,
+};
+
+export const Article: Story = {
+  render: () => <ArticleIcon />,
+};
+
+export const BarChart: Story = {
+  render: () => <BarChartIcon />,
+};
+
+export const ChatBubble: Story = {
+  render: () => <ChatBubbleIcon />,
+};
+
+export const Clock: Story = {
+  render: () => <ClockIcon />,
+};
+
+export const Pen: Story = {
+  render: () => <PenIcon />,
+};
+
