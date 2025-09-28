@@ -10,7 +10,7 @@ import {
 } from '../Icons';
 import classes from './styles.module.css';
 
-type Stats = {
+export type Stats = {
   score?: number | null;
   by?: string | null;
   time?: number | null;
