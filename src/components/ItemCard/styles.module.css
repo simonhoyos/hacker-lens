@@ -34,19 +34,3 @@
   flex-direction: column;
   gap: 0.25rem;
 }
-
-.author {
-  color: var(--orange-600);
-}
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-.stat {
-  display: flex;
-  flex-direction: row;
-  gap: 0.25rem;
-}
