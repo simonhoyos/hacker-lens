@@ -17,9 +17,9 @@ export async function getNewStories(args: { page: number }) {
   const start = (args.page - 1) * PAGE_SIZE;
   const end = start + PAGE_SIZE;
 
-  const stories = await Promise.all(
+  const storyList = await Promise.all(
     news.slice(start, end).map((id: number) => getItem({ id })),
   );
 
-  return stories;
+  return storyList;
 }
