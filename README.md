@@ -1,69 +1,102 @@
-# React + TypeScript + Vite
+# Hacker Lens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for browsing Hacker News stories with a clean, responsive interface. Built with TypeScript, Vite, and TanStack Router for optimal performance and developer experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse the latest Hacker News stories
+- View individual story details and comments
+- Responsive design for all devices
+- Fast loading with React Query for data fetching
+- Component library with Storybook integration
+- TypeScript for type safety
+- Vite for fast development and building
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **TanStack Router** - File-based routing
+- **TanStack Query** - Data fetching and caching
+- **Storybook** - Component development and documentation
+- **Zod** - Schema validation
+- **CSS Modules** - Scoped styling
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (version 22 or higher)
+- pnpm (recommended) or npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd hacker-lens
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+pnpm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Start the development server
+
+```bash
+pnpm dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### 4. Build for production
+
+```bash
+pnpm build
+```
+
+### 5. Preview the production build
+
+```bash
+pnpm preview
+```
+
+## Available Scripts
+
+- `pnpm dev` - Start the development server
+- `pnpm build` - Build the application for production
+- `pnpm preview` - Preview the production build locally
+- `pnpm lint` - Run ESLint to check for code issues
+- `pnpm storybook` - Start Storybook for component development
+- `pnpm build-storybook` - Build Storybook for deployment
+
+## API Integration
+
+The application fetches data from the official Hacker News API:
+- Base URL: `https://hacker-news.firebaseio.com/v0`
+- Stories endpoint: `/newstories.json`
+- Individual items: `/item/{id}.json`
+
+## Development
+
+### Component Development
+
+This project uses Storybook for component development and documentation. Start Storybook with:
+
+```bash
+pnpm storybook
+```
+
+### Code Quality
+
+The project includes:
+- ESLint for code linting
+- TypeScript for type checking
+- Prettier for code formatting
+
+Run linting with:
+```bash
+pnpm lint
 ```
